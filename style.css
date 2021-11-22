@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/* Container ***********************/
+
+.moveContainer{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 100px;
+    background: rgba(255, 51, 0, 1);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+/* Moj FlexBox ********************/
+
+
+body{
+    background: rgb(101, 101, 155);
+    background: linear-gradient(to right top, #bcdafc, #418ebb);
+    font-size: 100%;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: rgb(46, 74, 75);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    padding: 1em;
+    font-size: 3em;
+    letter-spacing: 8px;
+    z-index: 9;
+}
+
+.mainContainer{
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+
+.box{
+    margin-bottom: 1em;
+}
+
+.justifyContent{
+    width: 30%;
+    min-height: 150px;
+}
+
+.alignItems{
+    width: 30%;
+    min-height: 150px;
+}
+
+.alignContent{
+    width: 30%;
+    min-height: 150px;
+}
+
+.justifyContent h2,
+.alignItems h2,
+.alignContent h2{
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* male boxy *******************/
+.one{
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 69, 0);
+    background: linear-gradient(to right bottom, rgba(255,69,0,0.8), rgba(255,69,0,0));
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.two{
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 255, 0);
+    background: linear-gradient(to right bottom, rgba(255,255,0,1), rgba(255,255,0,0.2));
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.tree{
+    width: 50px;
+    height: 50px;
+    background: rgb(0, 128, 0);
+    background: linear-gradient(to right bottom, rgba(0,128,0,1), rgba(0,128,0,0.2));
+    border-radius: 5px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+
+/* Jednotlive boxy **********************************************/
+
+.frame{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8), rgba(255,255,255,0));
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px rgb(78, 76, 76);
+    backdrop-filter: blur(1.5em);
+}
+
+
+
+.alignItems .box .frame .one,
+.alignItems .box .frame .two,
+.alignItems .box .frame .tree{
+    flex-grow: 1;
+}
+
+.alignItems .stretch .one,
+.alignItems .stretch .two,
+.alignItems .stretch .tree{
+    height: auto;
+}
+
+/* Align Content ************************/
+
+.alignContent .box .frame{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.alignContent .box .frame .one,
+.alignContent .box .frame .two,
+.alignContent .box .frame .tree{
+    height: 30px;
+}
+
+#stretch .one,
+#stretch .two,
+#stretch .tree{
+    height: auto;
+}
+
+
+
+
+
+
+
+
